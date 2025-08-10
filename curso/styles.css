@@ -1,0 +1,163 @@
+ :root {
+            --bg-color: #f4f4f7;
+            --text-color: #1a1a1a;
+            --accent-color: #6f48c9;
+            --secondary-color: #e0dffd;
+            --progress-bg: #dcdce6;
+            --progress-fill: #6f48c9;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header.course-header {
+            background-color: white;
+            padding: 1.5rem 2rem;
+            border-bottom: 1px solid #ddd;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .course-header h2 {
+            font-weight: 600;
+            font-size: 1.4rem;
+            color: var(--accent-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 6px;
+            background-color: var(--progress-bg);
+            border-radius: 3px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            width: 0;
+            background-color: var(--progress-fill);
+            transition: width 0.4s ease;
+        }
+
+        main.course-content {
+            flex: 1;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: stretch;
+            height: 100%;
+        }
+
+        section.lesson {
+            flex: 1;
+            background-color: white;
+            padding: 3rem;
+            border-radius: 0;
+            box-shadow: none;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.4s ease;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20vh;
+            min-height: 0;
+        }
+
+        section.lesson.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .lesson h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--accent-color);
+        }
+
+        .lesson p {
+            font-size: 1rem;
+            color: #333;
+        }
+
+        nav.course-nav {
+            padding: 1.5rem 2rem;
+            background: #f9f9fb;
+            display: flex;
+            justify-content: space-between;
+            border-top: 1px solid #ddd;
+        }
+
+        .course-nav button {
+            padding: 0.8rem 1.8rem;
+            background-color: var(--accent-color);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .course-nav button:hover {
+            background-color: #5433a6;
+        }
+
+        .course-nav button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+
+        @media (max-width: 600px) {
+            .course-nav {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .course-nav button {
+                width: 100%;
+            }
+        }
+        .text-content{
+            width: 70vh;
+        }
+        .question_side{
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            gap: 5vh;
+        }
+        .response{
+            background-color: #cecece;
+            width: 50vh;
+            display: flex;
+            margin-top: 4vh;
+            padding: 1vh;
+            border-radius: 2vh;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            cursor: pointer;
+            transition: background 0.7s ease;
+            user-select: none;
+        }
+        .response:hover{
+            background-color: #b9b8b8;
+        }

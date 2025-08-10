@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="styles.css">
+<title>Home</title>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo"><img src="../images/EDUgeometry_logo.png" alt="logo" width="40vh">EDUGeometria</div>
+    <ul class="nav-links">
+      <li><a href="#principales">Principales</a></li>
+      <li><a href="#aparte">Aparte</a></li>
+      <li><a href="#destacados">Destacados</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+    <div class="user-circle" title="Usuario">F</div>
+    <ul class="user_profile_options">
+      <li class="user-circle">F</li>
+      <li>Editar Perfil</li>
+      <li>Ver Progreso</li>
+      <li>Eliminar Perfil</li>
+      <li>Cerrar Sesión</li>
+    </ul>
+    
+  </nav>
+
+  <header>
+    <div class="progress-legend">
+      <span>Progreso</span>
+      <div class="bar"><div class="fill"></div></div>
+      <div class="hex"></div>
+    </div>
+    <h1>Bienvenido <span class="name">Usuario</span><img src="../images/corona-removebg-preview.png" alt="PREMIUM" width="30vh"></h1>
+  </header>
+
+  <main>
+    <!-- Destacados -->
+    <section class="curso-group" id="destacados">
+      <h2>Destacados del Mes</h2>
+      <div class="destacados">
+        <article class="destacado-card" title="Trigonometría">
+          <h3>Trigonometría</h3>
+          <p>Domina las técnicas avanzadas para resolver problemas complejos.</p>
+          <button class="btn-primary" onclick="localStorage.setItem('topic', 'tg'); window.location.href = '../curso/curso.html'">Ver curso</button>
+        </article>
+        <article class="destacado-card" title="Geometria Euclidiana">
+          <h3>Geometria Euclidiana</h3>
+          <p>Aprende todo sobre la geometria euclidiana.</p>
+          <button class="btn-primary" onclick="localStorage.setItem('topic', 'ge'); window.location.href = '../curso/curso.html'">Ver curso</button>
+        </article>
+        <article class="destacado-card" title="Geometría Analítica">
+          <h3>Geometría Analítica</h3>
+          <p>Domina los conocimientos profundos de la geometria </p>
+          <button class="btn-primary" onclick="localStorage.setItem('topic', 'ga'); window.location.href = '../curso/curso.html'">Ver curso</button>
+        </article>
+      </div>
+    </section>
+
+    <!-- Cursos Principales -->
+    <section class="curso-group" id="principales">
+      <h2>Cursos Principales</h2>
+      <div class="cursos">
+        <article class="curso-card" title="Trigonometría">
+          <svg class="icono-curso" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M48 48 16 16l-8 8 32 32 8-8zM20 28 10 38l8 8 10-10-8-8zM44 14l-4 4 8 8 4-4-8-8z" />
+            <circle cx="30" cy="30" r="12" stroke="#6f48c9" stroke-width="3" fill="none" />
+          </svg>
+          <div class="barra-progreso"><div style="width: 65%;"></div></div>
+          <div class="nombre-curso">Trigonometría</div>
+          <button class="btn-secondary" onclick="window.location.href = '../curso/curso.html'">Empezar</button>
+        </article>
+        <article class="curso-card" title="Analítica">
+          <svg class="icono-curso" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect x="10" y="32" width="10" height="20" fill="#9f94ff"/>
+            <rect x="26" y="24" width="10" height="28" fill="#7b6eff"/>
+            <rect x="42" y="16" width="10" height="36" fill="#6f48c9"/>
+            <line x1="10" y1="52" x2="52" y2="12" stroke="#6f48c9" stroke-width="3" stroke-linecap="round"/>
+          </svg>
+          <div class="barra-progreso"><div style="width: 80%;"></div></div>
+          <div class="nombre-curso">Analítica</div>
+          <button class="btn-secondary" onclick="window.location.href = '../curso/curso.html'">Empezar</button>
+        </article>
+        <article class="curso-card" title="Euclidiana">
+          <svg class="icono-curso" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect x="22" y="10" width="20" height="44" rx="4" ry="4" fill="#8a88ff" />
+            <line x1="22" y1="20" x2="42" y2="20" stroke="#6f48c9" stroke-width="2"/>
+            <line x1="22" y1="30" x2="42" y2="30" stroke="#6f48c9" stroke-width="2"/>
+            <line x1="22" y1="40" x2="42" y2="40" stroke="#6f48c9" stroke-width="2"/>
+            <line x1="22" y1="50" x2="42" y2="50" stroke="#6f48c9" stroke-width="2"/>
+          </svg>
+          <div class="barra-progreso"><div style="width: 50%;"></div></div>
+          <div class="nombre-curso">Euclidiana</div>
+          <button class="btn-secondary" onclick="window.location.href = '../curso/curso.html'">Empezar</button>
+        </article>
+      </div>
+    </section>
+
+    <!-- Cursos Aparte -->
+    <section class="curso-group" id="aparte">
+      <h2>Cursos Aparte</h2>
+      <div class="cursos">
+        <article class="curso-card" title="Trigonometría">
+          <svg class="icono-curso" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M48 48 16 16l-8 8 32 32 8-8zM20 28 10 38l8 8 10-10-8-8zM44 14l-4 4 8 8 4-4-8-8z" />
+            <circle cx="30" cy="30" r="12" stroke="#6f48c9" stroke-width="3" fill="none" />
+          </svg>
+          <div class="barra-progreso"><div style="width: 25%;"></div></div>
+          <div class="nombre-curso">Trigonometría</div>
+          <button class="btn-secondary" onclick="window.location.href = '../curso/curso.html'">Empezar</button>
+        </article>
+        <article class="curso-card" title="Analítica">
+          <svg class="icono-curso" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect x="10" y="32" width="10" height="20" fill="#9f94ff"/>
+            <rect x="26" y="24" width="10" height="28" fill="#7b6eff"/>
+            <rect x="42" y="16" width="10" height="36" fill="#6f48c9"/>
+            <line x1="10" y1="52" x2="52" y2="12" stroke="#6f48c9" stroke-width="3" stroke-linecap="round"/>
+          </svg>
+          <div class="barra-progreso"><div style="width: 40%;"></div></div>
+          <div class="nombre-curso">Analítica</div>
+          <button class="btn-secondary" onclick="window.location.href = '../curso/curso.html'">Empezar</button>
+        </article>
+        <article class="curso-card" title="Euclidiana">
+          <svg class="icono-curso" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect x="22" y="10" width="20" height="44" rx="4" ry="4" fill="#8a88ff" />
+            <line x1="22" y1="20" x2="42" y2="20" stroke="#6f48c9" stroke-width="2"/>
+            <line x1="22" y1="30" x2="42" y2="30" stroke="#6f48c9" stroke-width="2"/>
+            <line x1="22" y1="40" x2="42" y2="40" stroke="#6f48c9" stroke-width="2"/>
+            <line x1="22" y1="50" x2="42" y2="50" stroke="#6f48c9" stroke-width="2"/>
+          </svg>
+          <div class="barra-progreso"><div style="width: 10%;"></div></div>
+          <div class="nombre-curso">Euclidiana</div>
+          <button class="btn-secondary" onclick="window.location.href = '../curso/curso.html'">Empezar</button>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contacto">
+    <div class="footer-content">
+      <p>© 2025 EDUGeometria. Todos los derechos reservados.</p>
+      <div class="social-links">
+        <a href="#" title="Facebook" aria-label="Facebook">📘</a>
+        <a href="#" title="Twitter" aria-label="Twitter">🐦</a>
+        <a href="#" title="LinkedIn" aria-label="LinkedIn">🔗</a>
+        <a href="#" title="Email" aria-label="Email">✉️</a>
+      </div>
+    </div>
+  </footer>
+<script src="script.js"></script>
+</body>
+</html>

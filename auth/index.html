@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Login - Registro</title>
+  <style>
+   
+  </style>
+</head>
+<body>
+
+  <div class="container" id="container">
+    <!-- Slider panel (figura) -->
+    <div class="slider" id="slider">
+      <div class="logo"></div>
+      <button id="toggleButton">Iniciar Sesión</button>
+    </div>
+
+    <!-- Sección de formularios -->
+    <div class="form-section">
+      <!-- Iniciar Sesión -->
+      <form class="form-panel" id="loginForm">
+        <h2>Iniciar Sesión</h2>
+        <input type="email" placeholder="Correo" name="email" required>
+        <input type="password" placeholder="Contraseña" name="password" required>
+        <p class="response_message"></p>
+        <button>Iniciar Sesión</button>
+        <div class="link">
+          <a href="#">¿Olvidaste tu contraseña?</a>
+        </div>
+      </form>
+
+      <!-- Registrarse -->
+      <form class="form-panel" id="registerForm">
+        <h2>Registrarse</h2>
+        <input type="text" placeholder="Nombre" name="name" required>
+        <input type="email" placeholder="Correo" name="email" required>
+        <input type="password" placeholder="Contraseña" name="password" required>
+        <p class="Rresponse_message"></p>
+        <button>Crear Cuenta</button>
+        <div class="link">
+          <a href="#" id="backToLogin">¿Ya tienes cuenta? Inicia Sesión</a>
+        </div>
+      </form>
+    </div>
+  </div>
+
+<script src="index.js"></script>
+
+</body>
+</html>

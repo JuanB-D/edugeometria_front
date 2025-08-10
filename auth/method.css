@@ -1,0 +1,110 @@
+   * {
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      margin: 0;
+      padding: 40px 20px;
+      background: #f4f6fa;
+      color: #333;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 40px;
+    }
+
+    .plans {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+.card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s;
+  height: 100%;
+  cursor: pointer;
+}
+    .card:hover {
+      transform: translateY(-5px);
+      opacity: 0.9;
+    }
+
+    .card-header {
+      background: #4a67d6;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+ .card-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.card-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px;
+  flex-grow: 1; /* empuja el botón hacia abajo */
+}
+    .card-content ul li {
+      margin-bottom: 10px;
+      padding-left: 20px;
+      position: relative;
+    }
+
+    .card-content ul li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: #4a67d6;
+      font-weight: bold;
+    }
+
+    .price {
+      font-size: 1.3rem;
+      font-weight: bold;
+      text-align: center;
+      color: #4a67d6;
+      margin-bottom: 15px;
+    }
+
+    .price.free {
+      color: #2ecc71;
+    }
+
+    .price.contact {
+      color: #7f8fa6;
+      font-style: italic;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      margin: 0 auto 20px;
+      background: #4a67d6;
+      color: white;
+      border-radius: 30px;
+      text-align: center;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background: #3a55b2;
+    }
