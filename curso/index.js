@@ -1,3 +1,19 @@
+
+
+if (menuToggle && mainNav) {
+  menuToggle.addEventListener('click', () => {
+    mainNav.classList.toggle('active');
+  });
+
+  // Cierra el menú al hacer clic en un enlace (modo móvil)
+  mainNav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      mainNav.classList.remove('active');
+    });
+  });
+}
+
+// ==== Tu lógica de curso actual ====
 let lessons = [];
 const baseUrl = "https://edugeometriaapi-production.up.railway.app";
 
@@ -93,16 +109,16 @@ async function renderLesson(index, type) {
         );
 
         lessonContent.innerHTML += `
-    <section class='questions_side'>
-      <h3 style='text-align: center'>${responseData.question}</h3>
-      ${shuffledResponses
-        .map(
-          (r) =>
-            `<div class='response' data-true='${r.correct}'>${r.response}</div>`
-        )
-        .join("")}
-    </section>
-  `;
+          <section class='questions_side'>
+            <h3 style='text-align: center'>${responseData.question}</h3>
+            ${shuffledResponses
+              .map(
+                (r) =>
+                  `<div class='response' data-true='${r.correct}'>${r.response}</div>`
+              )
+              .join("")}
+          </section>
+        `;
 
         document.querySelectorAll(".response").forEach((response) => {
           response.addEventListener("click", () => {

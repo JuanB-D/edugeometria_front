@@ -9,7 +9,13 @@
 <body>
 
   <nav class="navbar">
-    <div class="logo"><img src="../images/EDUgeometry_logo.png" alt="logo" width="40vh">EDUGeometria</div>
+    <div class="logo"><img src="../images/menu (1).png" class="menu-bar"></img><img src="../images/EDUgeometry_logo.png" alt="logo" width="40vh">EDUGeometria</div>
+    <ul class="nav-links-responsive">
+      <li><a href="#principales">Principales</a></li>
+      <li><a href="#aparte">Aparte</a></li>
+      <li><a href="#destacados">Destacados</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
     <ul class="nav-links">
       <li><a href="#principales">Principales</a></li>
       <li><a href="#aparte">Aparte</a></li>
@@ -44,17 +50,17 @@
         <article class="destacado-card" title="Trigonometría">
           <h3>Trigonometría</h3>
           <p>Domina las técnicas avanzadas para resolver problemas complejos.</p>
-          <button class="btn-primary" onclick="localStorage.setItem('topic', 'tg'); window.location.href = '../curso/curso.html'">Ver curso</button>
+          <button class="btn-primary" onclick="localStorage.setItem('topic', 'tg'); window.location.href = '../curso/curso.html'" data-curso="tg">Ver curso</button>
         </article>
         <article class="destacado-card" title="Geometria Euclidiana">
           <h3>Geometria Euclidiana</h3>
           <p>Aprende todo sobre la geometria euclidiana.</p>
-          <button class="btn-primary" onclick="localStorage.setItem('topic', 'ge'); window.location.href = '../curso/curso.html'">Ver curso</button>
+          <button class="btn-primary" onclick="localStorage.setItem('topic', 'ge'); window.location.href = '../curso/curso.html'" data-curso="ge">Ver curso</button>
         </article>
         <article class="destacado-card" title="Geometría Analítica">
           <h3>Geometría Analítica</h3>
           <p>Domina los conocimientos profundos de la geometria </p>
-          <button class="btn-primary" onclick="localStorage.setItem('topic', 'ga'); window.location.href = '../curso/curso.html'">Ver curso</button>
+          <button class="btn-primary" onclick="localStorage.setItem('topic', 'ga'); window.location.href = '../curso/curso.html'" data-curso="ga">Ver curso</button>
         </article>
       </div>
     </section>

@@ -2,9 +2,12 @@ const tarjetas = document.querySelectorAll('.curso-card');
 const nameContainer = document.querySelector('.name');
 const userCircle = document.querySelector('.user-circle');
 const userProfileOptions = document.querySelector('.user_profile_options')
+const baseUrl = 'https://edugeometriaapi-production.up.railway.app'
+const menuBar = document.querySelector('.menu-bar');
+const navLinks = document.querySelector('.nav-links-responsive')
 
 async function getUserData() {
-  const response = await fetch(`http://localhost:3000/auth/userdata/${localStorage.getItem('user-id')}`, {
+  const response = await fetch(`${baseUrl}/auth/userdata/${localStorage.getItem('user-id')}`, {
     method: 'GET',
     headers: {
       'Authorization': `Bearer ${localStorage.getItem('token')}`
@@ -24,7 +27,7 @@ async function getCurrent() {
   }
 
   const response = await fetch(
-    `http://localhost:3000/auth/userdata/${userId}`,
+    `${baseUrl}/auth/userdata/${userId}`,
     {
       method: "GET",
       headers: getAuthHeader(),
@@ -70,4 +73,11 @@ userCircle.addEventListener('click', () =>{
         userProfileIsOpen = !userProfileIsOpen;
         userProfileOptions.style.display = 'flex'
     }
+})
+menuBar.addEventListener('click', () =>{
+  if(navLinks.style.display === 'none'){
+    navLinks.style.display = 'flex'
+  }else{
+    navLinks.style.display = 'none'
+  }
 })

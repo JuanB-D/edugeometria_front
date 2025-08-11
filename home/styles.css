@@ -23,7 +23,7 @@ body {
   min-height: 100vh;
 }
 
-/* Navbar */
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -98,7 +98,7 @@ body {
   transform: scale(1.15);
 }
 
-/* Header */
+
 header {
   display: flex;
   justify-content: space-between;
@@ -165,7 +165,7 @@ header h1 .name {
   color: #7b45fa;
 }
 
-/* Main */
+
 main {
   flex: 1;
   padding: 0 60px;
@@ -175,7 +175,6 @@ main {
   overflow-y: auto;
 }
 
-/* Destacados */
 .destacados {
   display: flex;
   gap: 30px;
@@ -219,7 +218,7 @@ main {
   line-height: 1.4;
 }
 
-/* Botones */
+
 button {
   font-family: 'Orbitron', monospace;
   font-weight: 700;
@@ -255,7 +254,7 @@ button {
   transform: scale(1.1);
 }
 
-/* Cursos */
+
 .curso-group > h2 {
   font-size: 28px;
   font-weight: 900;
@@ -350,7 +349,7 @@ button {
   transition: width 0.5s ease;
 }
 
-/* Footer */
+
 footer {
   background: linear-gradient(90deg, #6f48c9, #8257e6);
   color: white;
@@ -379,8 +378,10 @@ footer {
   color: #ff00cc;
   outline: none;
 }
+.menu-bar{
+  display: none;
+}
 
-/* Responsive */
 @media (max-width: 900px) {
   .cursos {
     height: 45vh;
@@ -397,6 +398,13 @@ footer {
   }
   .destacado-card {
     max-width: 100%;
+  }
+  .menu-bar{
+    display: flex;
+  }
+  h1{
+    display: flex;
+    flex-direction: column;
   }
 }
 
@@ -429,4 +437,33 @@ footer {
 
 .user_profile_options li:hover{
   scale: 1.1;
+}
+
+
+  .user-circle{
+    padding: 1vh;
+  }
+  .menu-bar{
+    cursor: pointer;
+  }
+  .nav-links-responsive{
+    position: absolute;
+    top: 10vh;
+    left: 2vh;
+    list-style: none;
+    background-color: white;
+    height: 20vh;
+    width: 20vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    cursor: pointer;
+    gap: 2vh;
+  }
+@media screen and (max-width: 700px) {
+  .navbar .nav-links {
+    display: none !important;
+  }
 }

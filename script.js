@@ -1,7 +1,7 @@
 const main = document.querySelector('.main')
 const menuBar = document.querySelector('.menu_bar')
 const menu = document.querySelector('.menu')
-
+let boxSize = 3;
 
 let menuIsOpen = false;
 menuBar.addEventListener('click', () =>{
@@ -23,11 +23,25 @@ main.appendChild(Renderer.domElement);
 
 const loader = new THREE.TextureLoader();
 const texture = loader.load('./images/cubeBackground.png')
-const geometry = new THREE.BoxGeometry(3, 3, 3);
+const geometry = new THREE.BoxGeometry(boxSize, boxSize, boxSize);
 const material = new THREE.MeshBasicMaterial({map: texture})
 const cube = new THREE.Mesh(geometry, material);
 Scene.add( cube );
+window.addEventListener("resize", function() {
+    // Ajustar el tamaño del canvas
+    Renderer.setSize(window.innerWidth / 2, window.innerHeight / 2);
 
+    // Ajustar la cámara
+    Camera.aspect = window.innerWidth / window.innerHeight;
+    Camera.updateProjectionMatrix();
+
+    // Cambiar tamaño del cubo
+    if (window.innerWidth < 700) {
+        cube.scale.set(0.50, 0.50, 0.50); // equivalente a boxSize=1
+    } else {
+        cube.scale.set(1, 1, 1); // tamaño normal
+    }
+});
 const edges = new THREE.EdgesGeometry(geometry);
 const lineMaterial = new THREE.LineBasicMaterial({color:  0x800080})
 const line = new THREE.LineSegments(edges, lineMaterial)
@@ -43,3 +57,5 @@ function animate(){
 }
 
 Renderer.setAnimationLoop(animate);
+
+
